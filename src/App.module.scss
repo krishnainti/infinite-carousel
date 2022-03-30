@@ -1,0 +1,13 @@
+.appContainer {
+  height: 100vh;
+  background-color: #6a6a6a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  overflow: hidden;
+  max-width: 1366px;
+  margin: 0 auto;
+}

@@ -1,0 +1,30 @@
+.carouselContainer {
+  display: flex;
+  flex-direction: row;
+  scrollbar-width: none;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  gap: 48px;
+}
+
+.scrollable {
+  overflow-x: scroll;
+}
+
+.navigationButtons {
+  text-align: left;
+  padding: 56px 0px 0px 36px;
+  display: flex;
+
+  .backwardArrow {
+    cursor: pointer;
+    margin-right: 16px;
+  }
+
+  .forwardArrow {
+    cursor: pointer;
+  }
+}

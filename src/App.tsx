@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ReactElement } from "react";
+import styles from "./App.module.scss";
+import Carousel from "./Carousel";
+import Card from "./Card";
 
-function App() {
+const cards = ["Card1", "Card2", "Card3", "Card4", "Card5"];
+
+function App(): ReactElement {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.appContainer}>
+      <div className={styles.container}>
+        <Carousel>
+          {cards.map((text, index) => {
+            return <Card key={index} text={text} />;
+          })}
+        </Carousel>
+      </div>
     </div>
   );
 }
